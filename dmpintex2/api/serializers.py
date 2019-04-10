@@ -2,7 +2,7 @@ from django.contrib.auth.models import AbstractUser, Group
 from api.models import prescriber, overdoses, docdrugqty, dangerscore
 from rest_framework import serializers
 
-class PrescriberResource(ModelResource):
+class UserSerializer(ModelResource):
     class Meta:
         queryset = prescriber.objects.all()
         resource_name = 'prescriber'

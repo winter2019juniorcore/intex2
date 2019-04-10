@@ -6,10 +6,10 @@ class prescriber(models.Model):
     DoctorID = models.IntegerField(max_length=40)
     fname = models.CharField(max_length=30)
     lname = models.CharField(max_length=50)
-    gender = models.CharField()
-    state = models.CharField()
-    credentials = models.CharField()
-    specialty = models.CharField()
+    gender = models.CharField(max_length=50)
+    state = models.CharField(max_length=50)
+    credentials = models.CharField(max_length=50)
+    specialty = models.CharField(max_length=50)
     OpioidPrescriber = models.IntegerField(max_length=1)
     totalprescriptions = models.IntegerField(max_length=2000)
     abilify = models.IntegerField(max_length=1000)
@@ -268,15 +268,15 @@ class prescriber(models.Model):
     
 class overdoses(models.Model):
     state = models.CharField(max_length=200)
-    population = models.CharField()
-    deaths = models.CharField()
-    abbrev = models.CharField()
+    population = models.CharField(max_length=300)
+    deaths = models.CharField(max_length=300)
+    abbrev = models.CharField(max_length=300)
     def __str__(self):
         return ' %s %s %s %s ' % (self.state, self.population, self.deaths, self.abbrev)
 
 class docdrugqty(models.Model):
     DoctorID = models.IntegerField()
-    drug = models.CharField()
+    drug = models.CharField(max_length=300)
     qty = models.IntegerField()
     def __str__(self):
         return ' %s %s %s ' % (self.DoctorID, self.drug, self.qty)
@@ -288,4 +288,5 @@ class dangerscore(models.Model):
     def __str__(self):
         return ' %s %s ' % (self.DoctorID, self.dangerscore)
 
-class User(AbstractUser):
+
+
