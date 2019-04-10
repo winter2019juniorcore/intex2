@@ -1,5 +1,6 @@
-from tastypie.resources import ModelResource
+from django.contrib.auth.models import AbstractUser, Group
 from api.models import prescriber, overdoses, docdrugqty, dangerscore
+from rest_framework import serializers
 
 class PrescriberResource(ModelResource):
     class Meta:
