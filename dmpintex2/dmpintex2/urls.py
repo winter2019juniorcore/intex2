@@ -19,7 +19,9 @@ from django.contrib import admin
 urlpatterns = [
     # the built-in Django administrator
     url(r'^admin/', admin.site.urls),
-
+    url(r'^admin/')
+    url(r'^admin/')
+    url(r'^admin/')
     # urls for any third-party apps go here
 
     # the DMP router - this should normally be the last URL listed

@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_mako_plus',
-    'homepage'
+    'homepage',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -87,10 +88,15 @@ WSGI_APPLICATION = 'dmpintex2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'kouetdsz',
+        'USER': 'kouetdsz',
+        'PASSWORD': 'LVYtedFYEO61HyuSFG2y9ha6sTZDIVio',
+        'HOST': 'isilo.db.elephantsql.com',
+        'PORT': '5432',
+    },
 }
+
 
 
 # Password validation
