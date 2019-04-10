@@ -17,6 +17,7 @@ def process_request(request):
 
 class MyForm(forms.Form):
     '''An example form'''
+
     username = forms.CharField(label='Username')
     password = forms.CharField(label='Password', widget=forms.PasswordInput())
 
